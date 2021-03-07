@@ -1,0 +1,106 @@
+
+이전 예문
+
+sales1.xls
+orders3.xls
+sales2.xls
+sales3.xls
+apac1.xls
+europe2.xls
+na1.xls
+na2.xls
+sa1.xls
+
+이전 정규표현식
+
+sales.
+.a.\.
+.a.\.xls
+
+na와 sa를 찾고자 .a 패턴을 사용했지만 ca1.xls가 예문에 있다면 해당 패턴은 적합하지 않다.
+
+예문
+
+sales1.xls
+orders3.xls
+sales2.xls
+sales3.xls
+apac1.xls
+europe2.xls
+na1.xls
+na2.xls
+sa1.xls
+ca1.xls
+
+정규표현식
+
+[ns]a.\.xls
+
+예문
+The phrase "regular expression" is often
+abbreviated as RegEx or regex.
+
+정규표현식
+[Rr]eg[Ee]x
+
+- 만약 sam.xls라는 파일이 있다면 .은 모든 문자와 일치하므로 해당 파일명도 찾아낼 것이다.
+따라서 문자집합을 사용해 문제를 해결할 수 있다.
+
+예문
+
+sales1.xls
+orders3.xls
+sales2.xls
+sales3.xls
+apac1.xls
+europe2.xls
+sam.xls
+na1.xls
+na2.xls
+sa1.xls
+ca1.xls
+
+정규표현식
+
+[ns]a[0123456789]\.xls
+[ns]a[0-9]\.xls
+
+
+- RGB값 찾기
+
+예문
+body {
+    background-color: #fefbd8;
+}
+h1 {
+    background-color: #0000ff;
+}
+div {
+    background-color: #d0f4e6;
+}
+span {
+    background-color: #f08970;
+}
+
+정규표현식
+
+#[A-Fa-f0-9][A-Fa-f0-9][A-Fa-f0-9][A-Fa-f0-9][A-Fa-f0-9][A-Fa-f0-9]
+
+- 제외하고 찾기
+
+예문
+
+sales1.xls
+orders3.xls
+sales2.xls
+sales3.xls
+apac1.xls
+europe2.xls
+sam.xls
+na1.xls
+na2.xls
+sa1.xls
+ca1.xls
+
+정규표현식
+[ns]a[^0-9]\.xls
