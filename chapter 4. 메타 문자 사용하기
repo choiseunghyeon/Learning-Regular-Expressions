@@ -1,0 +1,51 @@
+- myArray[0] 찾기
+- myArray[0] myArray[1] myArray[2] 등 
+찾기
+
+예문 
+    var myArray = new Array();
+    ...
+    if (myArray[0] == 0) {
+    ...
+    }
+
+정규표현식
+myArray\[0\]
+myArray\[[0-9]\]
+myArray\[\d\]
+
+
+- \ 찾기
+
+예문
+\home\ben\sales\
+
+정규표현식
+\\
+
+- 빈 줄 제거
+
+예문
+"101","Ben","Forta"
+"102","Jim", "James"
+
+
+"103","Roberta", "Robertson"
+"104","Bob", "Bobson"
+
+정규표현식
+\r\n\r\n
+
+- 캐나다 우편번호 찾기
+
+예문
+11213
+A1C2E3
+48075
+48237
+M1B4F2
+90046
+H1H2H2
+
+정규표현식
+\w\d\w\d\w\d
