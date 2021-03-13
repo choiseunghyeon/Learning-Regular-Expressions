@@ -1,0 +1,80 @@
+예문
+Send a personal email to ben@forta.com. For questions
+about a book use support@forta.com. Fell free to send
+unsolicited email to spam@forta.com (wouldn't it be
+nice if it were that simple, huh?).
+
+정규 표현식
+\w+@\w+\.\w+
+
+예문
+Send personal email to ben@forta.com or
+ben.forta@forta.com. For questions about a
+book use support@forta.com. If your message
+is urgent try ben@urgent.forta.com. Feel
+free to send unsolicited email to
+spam@forta.com (wouldn't it be nice if
+it were that simple, huh?).
+
+정규 표현식
+[\w.]+@[\w.]+\.\w+
+
+예문
+Hello .ben@forta.com is my email address.
+
+정규 표현식
+\w+[\w.]*@[\w.]+\.\w+
+
+예문
+The URL is http://www.forta.com/, to connect
+securely use https://www.forta.com/ instead.
+
+정규표현식
+https?:\/\/[\w.\/]+
+
+예문
+body {
+    background-color: #fefbd8;
+}
+h1 {
+    background-color: #0000ff;
+}
+div {
+    background-color: #d0f4e6;
+}
+span {
+    background-color: #f08970;
+}
+
+정규표현식
+#[a-fA-F0-9]{6}
+
+예문
+4/8/17
+10-6-2018
+2/2/2
+01-01-01
+
+정규표현식
+\d{1,2}[-\/]\d{1,2}[-\/]\d{2,4}
+
+예문
+1001: $496.80
+1002: $1290.69
+1003: $26.43
+1004: $613.42
+1005: $7.61
+1006: $414.90
+1007: $25.00
+
+정규표현식
+\d+: \$\d{3,}\.\d{2}
+
+예문
+This offer is not available to customers
+living in <b>AK</b> and <b>HI</b>.
+
+정규 표현식
+<[Bb]>.*<\/[Bb]>
+<[Bb]>.*?<\/[Bb]>
+
