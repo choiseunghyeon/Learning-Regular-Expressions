@@ -1,0 +1,50 @@
+- 단어 경계 지정하기
+
+예문
+The cat scattered his food all over the room
+
+정규표현식
+\bcat\b
+
+예문
+The captain wore this cap and cape proudly as
+he sat listening to the recap of how his
+crew saved the men from a capsized vessel.
+
+정규표현식
+\bcap\b
+
+
+- 문자열 경계 정의하기
+
+예문
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<wsdl:definitions gargetNamespace="http://tips.cf"
+xmlns:impl="http://tips.cf" xmlns:"intf=http://tips.cf"
+xmlns:apachesoap="http://xml.apache.org/xml-soap"
+
+정규표현식
+^\s*<\?xml.*\?>
+
+- 다중행 모드 사용하기
+- 주석 찾기
+
+예문
+<script>
+function doSpellCheck(form, field) {
+    // Make sure not empty
+    if (filed.value == '') {
+        return false;
+    }
+    // Init
+    var windowName = 'spellWindow';
+    var spellCheckURL = 'spell.cfm?formname = comment&fieldname=' + field.name;
+
+    //Done
+    return false;
+}
+</script>
+
+정규표현식
+(?m)^\s*\/\/.*$
