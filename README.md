@@ -38,7 +38,9 @@
   - ^ 문자열의 시작 - 문자 집합 바깥에서 사용해야 한다. ex) ^\s*<\?xml.*\?>
   - $ 문자열의 끝 - ex) </[Hh][tt][Mm][ll]>\s\*$
   - flag m 다중행 모드 (^ 문자열 시작, $ 문자열의 끝 작동방식에만 영향을 줌)
-  - 참고: https://ko.javascript.info/regexp-multiline-mode
+    - 참고: https://ko.javascript.info/regexp-multiline-mode
+  - () 하위 표현식을 정의 (한 항목으로 취급한다.) ex. (&nbsp;){2,} 하위 표현식의 최소 구간 지정 - &nbsp;{2,}는 바로 앞에 있는 문자 ;의 최소 구간을 지정한 것
+  - | OR 연산자를 의미 ex) 19|20 - 19혹은 20과 일치한다.
 
 ## Tips
 
