@@ -1,0 +1,89 @@
+- 헤더 태그 찾기 <h1> 부터 <h6> 
+
+예문
+<body>
+<h1>Welcome to my Homepage</h1>
+Content is divided into two sections:<br/>
+<h2>SQL</h2>
+Information about SQL.
+<h2>RegEx</h2>
+Information about Regular Expressions.
+</body>
+
+정규표현식
+/<[hH][1-6]>.*?</[hH][1-6]>/g
+
+- 반복 단어 찾기
+- 역참조 사용하기
+
+예문
+This is a block of of text,
+several words here are are
+repeated, and and they
+should not be.
+
+정규표현식
+[ ]+(\w+)[ ]+\1
+- \1은 처음 사용하는 하위표현식과 일치 \2 는 두 번째로 사용하는 하위표현식과 일치
+
+
+- 헤더 태그 찾기 <h1> 부터 <h6> 
+- 역참조 사용하여 열린 태그와 닫힌 태그가 일치하는지 확인
+
+예문
+<body>
+<h1>Welcome to my Homepage</h1>
+Content is divided into two sections:<br/>
+<h2>SQL</h2>
+Information about SQL.
+<h2>RegEx</h3>
+Information about Regular Expressions.
+</body>
+
+정규표현식
+<([hH][1-6])>.*?</\1>
+<[hH]([1-6])>.*?<\/[hH]\1>
+
+- 치환 작업 수행하기
+
+예문
+Hello, ben@forta.com is my email address.
+
+정규표현식
+(\w+[\w\.]*@[\w\.]+\.\w+)
+
+치환
+<a href="mailto:$1">$1</a>
+
+JS
+"Hello, ben@forta.com is my email address.".replace(/(\w+[\w\.]*@[\w\.]+\.\w+)/g, '<a href="mailto:$1">$ 1</a>')
+
+- 전화번호 형식 변환 - (313) 555-1234 
+예문
+313-555-1234
+248-555-9999
+810-555-9000
+
+정규표현식
+([\d]{3})(-)([\d]{3})(-)([\d]{4})
+
+치환
+($1) $3-$5
+
+
+- 대소문자 변환하기
+<body>
+<h1>Welcome to my Homepage</h1>
+Content is divided into two sections:<br/>
+<h2>SQL</h2>
+Information about SQL.
+<h2>RegEx</h3>
+Information about Regular Expressions.
+</body>
+
+정규표현식
+(<[Hh]1>)(.*?)(<\/[Hh]1>)
+
+치환
+$1\U$2\E$3
+
