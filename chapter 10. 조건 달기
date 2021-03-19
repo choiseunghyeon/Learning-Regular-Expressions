@@ -1,0 +1,41 @@
+- JS 정규표현식에는 조건이 없는 듯                                                                           
+
+- 조건 달기
+- 올바른 형식의 전화번호만 찾기
+
+예문
+123-456-7890
+(123)456-7890
+(123)-456-7890
+(123-456-7890
+1234567890
+123 456 7890
+
+정규표현식
+\(?\d{3}\)?-?\d{3}-\d{4}
+
+- 역참조 조건
+
+예문
+<!-- Nav bar -->
+<div>
+<a href="/home"><img src="/images/home.gif"></a>
+<img src="/images/spacer.gif">
+<a href="/search"><img src="/images/search.gif"></a>
+<img src="/images/spacer.gif">
+<a href="/help"><img src="/images/search.gif"></a>
+</div>
+
+정규표현식
+(<[Aa]\s+[^>]+>\s*)?<[Ii][Mm][Gg]\s+[^>]+>(?(1)\s*<\/[Aa]>)
+
+- 1,2,4 행만 일치
+
+예문
+11111
+22222
+33333-
+44444-4444
+
+정규표현식
+\d{5}(?(?=-)-\d{4})
