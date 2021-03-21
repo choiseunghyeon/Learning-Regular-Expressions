@@ -76,10 +76,44 @@ John Smith: 123-45-6789
 \d{3}-\d{2}-\d{4} - 책과 동일
 
 
+- IP 주소
+- 네 바이트로 이루어져있다. 각 바이트는 마침표로 구분 (1 바이트는 0~255의 정수로 표현)
+
+예문
+localhost is 127.0.0.1
+
+정규표현식
+((25[0-5]|2[0-4]\d|1\d{2}|\d{1,2})\.){3}(25[0-5]|2[0-4]\d|1\d{2}|\d{1,2}) - 책과 동일
 
 
+- URL
 
+예문
+http://www.forta.com/blog
+https://www.forta.com:80/blog/index.cfm
+http://www.forta.com
+http://ben:password@www.forta.com/
+http://localhost/index.php?ab=1&c=2
+http://localhost:8500/
 
+정규표현식
+http[s]?://.+[/]? - 내가 푼 답 - 잘못된 부분: 책의 의도는 프로토콜, 호스트 이름, 포트 번호와 경로가 일치하는지 확인 하는 것 118p.
+https?:\/\/[-\w.]+(:\d+)?(\/([\w\/_.]*)?)? - 책에서 나온 답
+
+- 완전한 URL
+- 프로토콜, 호스트 이름, 포트 번호, 쿼리 문자열 까지 일치
+
+예문
+http://www.forta.com/blog
+https://www.forta.com:80/blog/index.cfm
+http://www.forta.com
+http://ben:password@www.forta.com/
+http://localhost/index.php?ab=1&c=2
+http://localhost:8500/
+
+정규표현식
+https?://[-\w.]+(:\d+)?(/([\w/_.]*)?)?([?][\w=&]+)? - 내가 푼 답
+https?:\/\/(\w*:\w*@)?[-\w.]+(:\d+)?(/([\w/_.]*(\?\S+)?)?)? - 책에서 나온 답
 
 
 
